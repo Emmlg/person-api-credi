@@ -9,7 +9,7 @@ spring:
     password: "${DATASOURCE_PASSWORD:}"
 
   jpa:
-    database-platform: org.hibernate.dialect.MySQL8Dialect
+    database-platform: org.hibernate.dialect.MySQLDialect
     open-in-view: false
     show-sql: false
     properties:
@@ -17,3 +17,29 @@ spring:
         format_sql: true
         naming:
           physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+# Logger config
+logging:
+  level:
+    org:
+      springframework: off
+      hibernate:
+        SQL: info
+        type:
+          descriptor:
+            sql:
+              BasicBinder: info
+  logback:
+    rolling-policy:
+      max-history: 1
+      total-size-cap: "5MB"
+
+
+# Swagger config
+springdoc:
+  api-docs:
+    path: /api/v1/select/docs
+  swagger-ui:
+    path: /api/v1/select/swagger-ui.html
+    display-request-duration: true
+    disable-swagger-default-url: true
