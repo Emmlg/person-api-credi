@@ -8,6 +8,7 @@ import lombok.Setter;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -27,7 +28,7 @@ public class PersonResponseDto implements Serializable {
 
     private Integer age;
 
-    private LocalDate creatAt;
+    private LocalDateTime creatAt;
 
     private boolean active;
 }

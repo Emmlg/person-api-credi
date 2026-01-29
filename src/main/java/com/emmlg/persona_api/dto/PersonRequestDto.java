@@ -20,9 +20,6 @@ import static com.emmlg.persona_api.commons.contants.Constant.INVALID_VALUE;
 @AllArgsConstructor
 public class PersonRequestDto {
 
-
-    private Integer personId;
-
     @NotBlank(message = INVALID_VALUE)
     private String name;
 
@@ -37,5 +34,6 @@ public class PersonRequestDto {
     private LocalDate birthdate;
 
     @NotNull(message = INVALID_VALUE)
-    private boolean active;
+    @NotBlank
+    private Boolean active;
 }
