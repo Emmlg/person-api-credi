@@ -47,7 +47,7 @@ public class PersonController {
         return personService.updatePerson(personId,personReqDto);
     }
 
-    @PutMapping("/disable/{personId}")
+    @PutMapping("/disable/{id}")
     public GeneralResponse disablePerson(@PathVariable("id") Integer personId) throws PersonException{
         return personService.disablePerson(personId);
     }
