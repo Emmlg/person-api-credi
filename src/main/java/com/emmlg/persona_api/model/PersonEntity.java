@@ -32,7 +32,7 @@ public class PersonEntity extends Auditable {
 
     private LocalDate birthdate;
 
-    @Column(name = "is_activate",nullable = false)
+    @Column(name = "is_active",nullable = false)
     private boolean active;
 
 }
