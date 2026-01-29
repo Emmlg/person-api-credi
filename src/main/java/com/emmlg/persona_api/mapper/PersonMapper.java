@@ -25,6 +25,17 @@ public class PersonMapper {
         return saved;
     }
 
+    public PersonEntity updatePersonFromDto (PersonRequestDto personDto, PersonEntity personEntity){
+
+        personEntity.setName(personDto.getName());
+        personEntity.setLastName(personDto.getLastName());
+        personEntity.setBirthdate(personDto.getBirthdate());
+       // personEntity.setEmail(personDto.getEmail());
+        personEntity.setActive(personDto.getActive());
+
+        return personEntity;
+    }
+
 
     public PersonResponseDto PersonToRespDto(PersonEntity person){
 
@@ -54,6 +65,5 @@ public class PersonMapper {
                 .pagination(pageInfo)
                 .build();
     }
-
 
 }

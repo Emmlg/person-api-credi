@@ -42,7 +42,7 @@ public class PersonService {
 
     }
 
-    public PersonResponseDto updatePerson(Integer personId, PersonRequestDto updatedPerson){
+    public PersonResponseDto updatePerson(Integer personId, PersonRequestDto updatedPersonDto){
         PersonEntity existingPerson = personRepository.findById(personId).orElseThrow(
                 ()-> new PersonException(
                         "Person not found",
@@ -51,8 +51,7 @@ public class PersonService {
                 )
         );
 
-        personMapper.DtoToPerson(updatedPerson);
-        PersonEntity savedPerson = personRepository.save(existingPerson);
+        var savedPerson = personMapper.updatePersonFromDto(updatedPersonDto, existingPerson);
         return personMapper.PersonToRespDto(savedPerson);
     }
 

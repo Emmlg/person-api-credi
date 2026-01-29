@@ -34,6 +34,5 @@ public class PersonRequestDto {
     private LocalDate birthdate;
 
     @NotNull(message = INVALID_VALUE)
-    @NotBlank
     private Boolean active;
 }
