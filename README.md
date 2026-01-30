@@ -58,18 +58,19 @@ Una vez iniciada la aplicación:
 
 ``` http://localhost:8080/api/v1/select/swagger-ui.html ```
 - *Base de API*
+  
 ```http://localhost:8080/api/v1/select/person```
 
 
 
 📌 Endpoints principales
 
-[] POST /api/v1/select/person → Crear persona
-[] GET /api/v1/select/person → Listar personas
-[] GET /api/v1/select/person/{id} → Obtener persona
-[] PUT /api/v1/select/person/{id} → Actualizar persona
-[] DELETE /api/v1/select/person/{id} → Eliminar persona
-[] PUT /api/v1/select/person/disable/{id} → Eliminar persona de forma logica
+- [ ] POST /api/v1/select/person → Crear persona
+- [ ] GET /api/v1/select/person → Listar personas
+- [ ] GET /api/v1/select/person/{id} → Obtener persona
+- [ ] PUT /api/v1/select/person/{id} → Actualizar persona
+- [ ] DELETE /api/v1/select/person/{id} → Eliminar persona
+- [ ] PUT /api/v1/select/person/disable/{id} → Eliminar persona de forma logica
 
 
 
