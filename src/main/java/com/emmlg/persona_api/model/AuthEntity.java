@@ -20,6 +20,9 @@ public class AuthEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer authId;
 
+    @Column(name = "user_name", nullable = false, length = 50, unique = true)
+    private String username;
+
     @Column(name = "password_hash", nullable = false, length = 255)
     private String passwordHashed;
 
