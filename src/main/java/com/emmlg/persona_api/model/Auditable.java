@@ -10,6 +10,12 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.time.LocalDateTime;
 
+/**
+ * @author Emmanuel Lopez
+ * @version 1.0.0
+ * date 29/Jan/2026
+ */
+
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
 @Getter

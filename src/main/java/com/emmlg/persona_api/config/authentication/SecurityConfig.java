@@ -1,4 +1,4 @@
-package com.emmlg.persona_api.config;
+package com.emmlg.persona_api.config.authentication;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,11 +11,17 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
+/**
+ * @author Emmanuel Lopez
+ * @version 1.0.0
+ * date 29/Jan/2026
+ */
+
 @Configuration
 public class SecurityConfig {
 
     @Bean
-    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+    public SecurityFilterChain filterChain(HttpSecurity http){
 
         http
             .csrf(AbstractHttpConfigurer::disable)

@@ -29,10 +29,6 @@ logging:
           descriptor:
             sql:
               BasicBinder: info
-  logback:
-    rolling-policy:
-      max-history: 1
-      total-size-cap: "5MB"
 
 
 # Swagger config

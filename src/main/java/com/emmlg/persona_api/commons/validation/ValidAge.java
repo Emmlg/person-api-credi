@@ -10,6 +10,12 @@ import java.lang.annotation.*;
 @Target({ ElementType.FIELD })
 @Retention(RetentionPolicy.RUNTIME)
 
+/**
+ * @author Emmanuel Lopez
+ * @version 1.0.0
+ * date 29/Jan/2026
+ */
+
 public @interface ValidAge {
 
     int minAge() default 18;

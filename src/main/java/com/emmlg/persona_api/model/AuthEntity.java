@@ -6,6 +6,11 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * @author Emmanuel Lopez
+ * @version 1.0.0
+ * date 29/Jan/2026
+ */
 
 @Getter
 @Setter
@@ -23,7 +28,7 @@ public class AuthEntity {
     @Column(name = "user_name", nullable = false, length = 50, unique = true)
     private String username;
 
-    @Column(name = "password_hash", nullable = false, length = 255)
+    @Column(name = "password_hash", nullable = false)
     private String passwordHashed;
 
     // Fk

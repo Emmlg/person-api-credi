@@ -8,6 +8,7 @@ import com.emmlg.persona_api.exceptions.PersonException;
 import com.emmlg.persona_api.mapper.PersonMapper;
 import com.emmlg.persona_api.model.PersonEntity;
 import com.emmlg.persona_api.repository.PersonRepository;
+import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Fallback;
 import org.springframework.data.domain.Pageable;
@@ -16,6 +17,12 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 
+/**
+ * @author Emmanuel Lopez
+ * @version 1.0.0
+ * date 29/Jan/2026
+ */
+
 @Service
 @AllArgsConstructor
 public class PersonService {
@@ -23,7 +30,7 @@ public class PersonService {
     private final PersonRepository personRepository;
     private final PersonMapper personMapper;
 
-    @Fallback
+    @Transactional
     public PersonResponseDto createPerson(PersonRequestDto newPerson){
 
         if (personRepository.existsByEmail(newPerson.getEmail())){
@@ -42,6 +49,7 @@ public class PersonService {
 
     }
 
+    @Transactional
     public PersonResponseDto updatePerson(Integer personId, PersonRequestDto updatedPersonDto){
         PersonEntity existingPerson = personRepository.findById(personId).orElseThrow(
                 ()-> new PersonException(
@@ -55,6 +63,7 @@ public class PersonService {
         return personMapper.PersonToRespDto(savedPerson);
     }
 
+    @Transactional
     public GeneralResponse deletePerson(Integer personId){
         PersonEntity existingPerson = personRepository.findById(personId).orElseThrow(
                 ()-> new PersonException(
@@ -72,6 +81,7 @@ public class PersonService {
                 .build();
     }
 
+    @Transactional
     public GeneralResponse disablePerson(Integer personId){
         PersonEntity existingPerson = personRepository.findById(personId).orElseThrow(
                 ()-> new PersonException(

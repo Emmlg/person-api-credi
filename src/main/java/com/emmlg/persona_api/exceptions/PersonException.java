@@ -3,7 +3,12 @@ package com.emmlg.persona_api.exceptions;
 import lombok.Getter;
 import org.springframework.http.HttpStatus;
 
-import java.util.List;
+
+/**
+ * @author Emmanuel Lopez
+ * @version 1.0.0
+ * date 29/Jan/2026
+ */
 
 @Getter
 public class PersonException extends RuntimeException {

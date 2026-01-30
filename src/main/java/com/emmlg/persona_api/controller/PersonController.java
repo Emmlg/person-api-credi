@@ -11,10 +11,17 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
+import org.springdoc.core.annotations.ParameterObject;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.*;
+
+/**
+ * @author Emmanuel Lopez
+ * @version 1.0.0
+ * date 29/Jan/2026
+ */
 
 @Tag(name = "Person")
 @AllArgsConstructor
@@ -35,6 +42,7 @@ public class PersonController {
     @ApiResponse(responseCode = "200", description =" Persons retrieved successfully")
     @GetMapping
     public PaginationResponse<PersonResponseDto> getPersons(
+            @ParameterObject
             @PageableDefault(size = 10,
                     sort = "creationDate",
                     direction = Sort.Direction.ASC) Pageable pageable) throws PersonException {

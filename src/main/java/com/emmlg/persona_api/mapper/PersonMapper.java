@@ -10,6 +10,12 @@ import org.springframework.stereotype.Component;
 import static com.emmlg.persona_api.util.DateUtil.getAgeFromBirthDate;
 import static com.emmlg.persona_api.util.PaginationUtils.mapToPageInfo;
 
+/**
+ * @author Emmanuel Lopez
+ * @version 1.0.0
+ * date 29/Jan/2026
+ */
+
 @Component
 public class PersonMapper {
 

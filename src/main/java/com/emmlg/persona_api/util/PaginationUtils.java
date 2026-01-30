@@ -5,12 +5,11 @@ import com.emmlg.persona_api.dto.pagination.PageInfo;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 
 /**
- * @author Emmanuel Lopez - [ Quimera -Team]
+ * @author Emmanuel Lopez
  * @version 1.0.0
- * date 17/September/2025
+ * date 29/Jan/2026
  */
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)

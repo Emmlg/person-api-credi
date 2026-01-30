@@ -6,6 +6,12 @@ import jakarta.validation.ConstraintValidatorContext;
 import java.time.LocalDate;
 import java.time.Period;
 
+/**
+ * @author Emmanuel Lopez
+ * @version 1.0.0
+ * date 29/Jan/2026
+ */
+
 public class AgeValidator implements ConstraintValidator<ValidAge, LocalDate> {
 
     private int minAge;

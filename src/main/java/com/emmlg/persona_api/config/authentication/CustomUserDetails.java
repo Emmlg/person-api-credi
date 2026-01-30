@@ -1,13 +1,19 @@
-package com.emmlg.persona_api.config;
+package com.emmlg.persona_api.config.authentication;
 
 
 import com.emmlg.persona_api.model.AuthEntity;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-
 import java.util.Collection;
 import java.util.List;
+
+/**
+ * @author Emmanuel Lopez
+ * @version 1.0.0
+ * date 29/Jan/2026
+ */
+
 public class CustomUserDetails implements UserDetails {
 
     private final AuthEntity auth;

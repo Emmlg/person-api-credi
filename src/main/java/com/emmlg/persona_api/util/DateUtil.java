@@ -5,6 +5,12 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 
+/**
+ * @author Emmanuel Lopez
+ * @version 1.0.0
+ * date 29/Jan/2026
+ */
+
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class DateUtil {
 

@@ -1,9 +1,13 @@
 package com.emmlg.persona_api.dto;
 
-import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
 import org.springframework.http.HttpStatus;
 
+/**
+ * @author Emmanuel Lopez
+ * @version 1.0.0
+ * date 29/Jan/2026
+ */
 
 @Getter
 @Setter
@@ -12,12 +16,9 @@ import org.springframework.http.HttpStatus;
 @AllArgsConstructor
 public class GeneralResponse {
 
-    @Schema(description = "error message")
     private String message;
 
-    @Schema(description = "process")
     private String process;
 
-    @Schema(description = "HTTP Status")
     private HttpStatus httpStatus;
 }

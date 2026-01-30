@@ -1,4 +1,4 @@
-package com.emmlg.persona_api.config;
+package com.emmlg.persona_api.config.authentication;
 
 import com.emmlg.persona_api.model.AuthEntity;
 import com.emmlg.persona_api.repository.AuthRepository;
@@ -7,6 +7,12 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+
+/**
+ * @author Emmanuel Lopez
+ * @version 1.0.0
+ * date 29/Jan/2026
+ */
 
 @Service
 @AllArgsConstructor
