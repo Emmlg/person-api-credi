@@ -1,4 +1,4 @@
-# Reto Backend: Sistema de Gestión de Personas 👤
+``# Reto Backend: Sistema de Gestión de Personas 👤
 
 ## 🎯 Objetivo
 
@@ -39,6 +39,8 @@ cd person-api-credi
 
 #### 1.3. Crear la base de datos MOCK con el siguiente script
 
+https://drive.google.com/file/d/1273OT4Gb45Xy8v8mA5nY-wNuJtdG0O4J/view?usp=sharing
+
 > [!IMPORTANT]
 > Si cambias el nombre o credenciales de la base de datos, actualízalos en application.yaml
 
@@ -46,7 +48,7 @@ cd person-api-credi
 ```
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: "${DATASOURCE_URL"
+    url: "${DATASOURCE_URL:}"
     username: "${DATASOURCE_USERNAME:}"
     password: "${DATASOURCE_PASSWORD:}"
 ```
@@ -74,6 +76,8 @@ Una vez iniciada la aplicación:
 
 
 
+## 3. prueba la API en Linea ☁️
 
+https://person-api-credi.onrender.com/api/v1/select/swagger-ui/index.html
 
 
