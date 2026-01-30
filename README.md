@@ -1,4 +1,4 @@
-``# Reto Backend: Sistema de Gestión de Personas 👤
+# Reto Backend: Sistema de Gestión de Personas 👤
 
 ## 🎯 Objetivo
 
